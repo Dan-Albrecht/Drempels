@@ -219,7 +219,7 @@
     <CustomBuild Include="installer\drempels.nsi" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="installer\drempels.txt" />
+    <Text Include="installer\install_files\drempels.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
