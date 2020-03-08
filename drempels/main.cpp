@@ -212,7 +212,6 @@ bool bWarpmodePaused = false;
 #include "resource.h"
 #include <stdio.h>		// for sprintf() for fps display
 
-#define _MT             // for multithreading
 #include <process.h>    // for multithreading
 
 
