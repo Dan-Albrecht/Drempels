@@ -248,7 +248,7 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="installer\drempels.txt" />
+    <Text Include="installer\install_files\drempels.txt" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="installer\drempels.nsi" />
