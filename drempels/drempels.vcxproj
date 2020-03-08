@@ -128,7 +128,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OutputFile>debug\drempels.exe</OutputFile>
-      <AdditionalDependencies>comctl32.lib;ddraw.lib;dsound.lib;odbc32.lib;odbccp32.lib;dxguid.lib;winmm.lib;LIBCMT.LIB;msimg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>comctl32.lib;ddraw.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
