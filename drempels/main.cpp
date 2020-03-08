@@ -1895,7 +1895,7 @@ BOOL CALLBACK ConfigDialogProc(HWND hwnd,UINT msg,WPARAM wParam,LPARAM lParam)
 			//SendMessage( GetDlgItem( hwnd, IDC_RENDERMODE_COMBO ), CB_ADDSTRING, 0, (LPARAM)" windowed, low detail");
 			//SendMessage( GetDlgItem( hwnd, IDC_RENDERMODE_COMBO ), CB_ADDSTRING, 0, (LPARAM)" windowed, med. detail *");
 			//SendMessage( GetDlgItem( hwnd, IDC_RENDERMODE_COMBO ), CB_ADDSTRING, 0, (LPARAM)" windowed, high detail ");
-            for (i=0; i<3; i++)
+            for (int i=0; i<3; i++)
 			    SendMessage( GetDlgItem( hwnd, IDC_RENDERMODE_COMBO ), CB_SETITEMDATA, i, i);
 
             int cursel;
@@ -1914,7 +1914,7 @@ BOOL CALLBACK ConfigDialogProc(HWND hwnd,UINT msg,WPARAM wParam,LPARAM lParam)
 			SendMessage( GetDlgItem( hwnd, IDC_DESKTOP_RENDERMODE_COMBO ), CB_ADDSTRING, 0, (LPARAM)" desktop wallpaper mode, low detail *");
 			SendMessage( GetDlgItem( hwnd, IDC_DESKTOP_RENDERMODE_COMBO ), CB_ADDSTRING, 0, (LPARAM)" desktop wallpaper mode, med. detail - slow");
 			SendMessage( GetDlgItem( hwnd, IDC_DESKTOP_RENDERMODE_COMBO ), CB_ADDSTRING, 0, (LPARAM)" desktop wallpaper mode, high detail - SLOW");
-            for (i=0; i<3; i++)
+            for (int i=0; i<3; i++)
 			    SendMessage( GetDlgItem( hwnd, IDC_DESKTOP_RENDERMODE_COMBO ), CB_SETITEMDATA, i, i);
 
 			cursel = 2 - procsize_as_app;
