@@ -202,8 +202,10 @@ void BlitWarp256AndMix(td_cellcornerinfo cell0,
 	fCubicInterp(cell1.v, cell3.v, cell1.dvdy, cell3.dvdy, &vR, &dvR, &ddvR, &dddvR, fdy);
 	fCubicInterp(cell1.s, cell3.s, cell1.dsdy, cell3.dsdy, &sR, &dsR, &ddsR, &dddsR, fdy);
 
-	unsigned __int16 m_old[4] = { old_dest_mult, old_dest_mult, old_dest_mult, old_dest_mult };
-	unsigned __int16 m_new[4] = { new_mult, new_mult, new_mult, new_mult };
+	unsigned __int16 old_dest_mult_us = static_cast<unsigned __int16>(old_dest_mult);
+	unsigned __int16 new_mult_us = static_cast<unsigned __int16>(new_mult);
+	unsigned __int16 m_old[4] = { old_dest_mult_us, old_dest_mult_us, old_dest_mult_us, old_dest_mult_us };
+	unsigned __int16 m_new[4] = { new_mult_us, new_mult_us, new_mult_us, new_mult_us };
 
 	//int u, du, ddu, dddu;
 	//int v, dv, ddv, dddv;
@@ -900,8 +902,10 @@ void BlitWarpNon256AndMix(td_cellcornerinfo cell0,
 	fCubicInterp(cell1.v, cell3.v, cell1.dvdy, cell3.dvdy, &vR, &dvR, &ddvR, &dddvR, fdy);
 	fCubicInterp(cell1.s, cell3.s, cell1.dsdy, cell3.dsdy, &sR, &dsR, &ddsR, &dddsR, fdy);
 
-	unsigned __int16 m_old[4] = { old_dest_mult, old_dest_mult, old_dest_mult, old_dest_mult };
-	unsigned __int16 m_new[4] = { new_mult, new_mult, new_mult, new_mult };
+	unsigned __int16 old_dest_mult_us = static_cast<unsigned __int16>(old_dest_mult);
+	unsigned __int16 new_mult_us = static_cast<unsigned __int16>(new_mult);
+	unsigned __int16 m_old[4] = { old_dest_mult_us, old_dest_mult_us, old_dest_mult_us, old_dest_mult_us };
+	unsigned __int16 m_new[4] = { new_mult_us, new_mult_us, new_mult_us, new_mult_us };
 
 	//int u, du, ddu, dddu;
 	//int v, dv, ddv, dddv;

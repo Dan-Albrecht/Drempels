@@ -329,8 +329,10 @@ void texmgr::BlendTex(int src1, int src2, int dest, float t, bool bMMX)
 
 		if (bMMX)
 		{
-			unsigned short mult1[4] = { m1, m1, m1, m1 };
-			unsigned short mult2[4] = { m2, m2, m2, m2 };
+			unsigned short m1_us = static_cast<unsigned __int16>(m1);
+			unsigned short m2_us = static_cast<unsigned __int16>(m2);
+			unsigned short mult1[4] = { m1_us, m1_us, m1_us, m1_us };
+			unsigned short mult2[4] = { m2_us, m2_us, m2_us, m2_us };
 
 			__asm
 			{
