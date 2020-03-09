@@ -21,7 +21,7 @@
 
 #include "ddraw.h"
 
-typedef enum fourcc_enum {
+enum fourcc_enum {
     RGB_OVERLAY,    // using RGB overlay (use Blt)
     UYVY,           // YUV mode #1 (manual blit)
     YUY2,           // YUV mode #2 (manual blit)
