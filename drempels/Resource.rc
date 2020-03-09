@@ -1,0 +1,285 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONFIG DIALOGEX 0, 0, 362, 295
+STYLE DS_SYSMODAL | DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Drempels v1.5"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "OK",IDOK,254,274,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,305,274,50,14
+    COMBOBOX        IDC_RENDERMODE_COMBO,189,29,156,128,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_BITDEPTHCOMBO,189,57,156,128,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Slider1",IDC_TIMEBETWEENTEXTURES,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,68,133,102,15
+    CONTROL         "Slider1",IDC_TEXTUREFADETIME,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,68,158,102,15
+    CONTROL         "Slider1",IDC_MASTERZOOM,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,68,184,102,15
+    CONTROL         "Slider1",IDC_MODESWITCHSPEEDMULTIPLIER,
+                    "msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,
+                    68,210,102,15
+    CONTROL         "Slider1",IDC_ANIMATIONSPEED,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,68,237,102,15
+    CONTROL         "Slider1",IDC_MOTIONBLUR,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,68,263,102,19
+    CONTROL         "Suppress 'press h for help' message",IDC_HELPMSG,"Button",
+                    BS_AUTOCHECKBOX | BS_TOP | BS_MULTILINE | WS_TABSTOP,189,
+                    96,129,10
+    CONTROL         "Suppress unsolicited text messages",IDC_SUPPRESSALLMSG,
+                    "Button",BS_AUTOCHECKBOX | BS_TOP | BS_MULTILINE | 
+                    WS_TABSTOP,189,106,137,10
+    CONTROL         "Generate debug info in c:\\d_debug.txt",IDC_DEBUGINFO,
+                    "Button",BS_AUTOCHECKBOX | BS_TOP | BS_MULTILINE | 
+                    WS_TABSTOP,189,116,136,10
+    CONTROL         "Exit when mouse is moved",IDC_EXITONMOUSEMOVE,"Button",
+                    BS_AUTOCHECKBOX | BS_TOP | BS_MULTILINE | WS_TABSTOP,189,
+                    75,161,10
+    CONTROL         "Start in High Quality Texture mode (bilinear texel interpolation)",
+                    IDC_HIGHQUALITY,"Button",BS_AUTOCHECKBOX | BS_TOP | 
+                    BS_MULTILINE | WS_TABSTOP,189,126,125,20
+    EDITTEXT        IDC_IMAGEDIR,186,160,169,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse for Folder",IDC_IMAGEDIRBUTTON,290,175,65,14
+    COMBOBOX        IDC_FPS_COMBO,73,105,55,128,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "About",IDABOUT,182,274,50,14
+    PUSHBUTTON      "Disclaimer",IDREG,193,259,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    LTEXT           "- - - VIDEO MODE - - -",IDC_STATIC,274,47,73,9
+    RTEXT           "60",IDC_STATIC,154,125,10,8
+    LTEXT           "0 seconds",IDC_STATIC,73,125,44,9
+    GROUPBOX        "When running in DESKTOP MODE",IDC_STATIC,7,7,166,83,
+                    BS_CENTER
+    LTEXT           "Time between texture changes",IDC_STATIC,12,128,53,17,0,
+                    WS_EX_RIGHT
+    RTEXT           "60",IDC_STATIC,154,150,10,8
+    LTEXT           "0 seconds",IDC_STATIC,72,150,44,9
+    LTEXT           "Texture fade time",IDC_STATIC,12,153,53,17,0,
+                    WS_EX_RIGHT
+    RTEXT           "in 4x",IDC_STATIC,142,176,21,8
+    LTEXT           "out 4x",IDC_STATIC,72,176,19,9
+    LTEXT           "Master Zoom",IDC_STATIC,19,179,46,17,0,WS_EX_RIGHT
+    LTEXT           "Mode Change Frequency",IDC_STATIC,14,206,51,17,0,
+                    WS_EX_RIGHT
+    LTEXT           "Animation Speed",IDC_STATIC,22,233,43,17,0,WS_EX_RIGHT
+    LTEXT           "Get images from this folder:",IDC_STATIC,188,150,132,9
+    CTEXT           "normal",IDC_STATIC,105,176,27,8
+    RTEXT           "8x faster",IDC_STATIC,134,202,29,8
+    LTEXT           "8x slower",IDC_STATIC,72,202,32,9
+    CTEXT           "normal",IDC_STATIC,107,202,24,8
+    RTEXT           "4x faster",IDC_STATIC,134,229,29,8
+    LTEXT           "4x slower",IDC_STATIC,72,229,32,9
+    CTEXT           "normal",IDC_STATIC,106,229,24,8
+    LTEXT           "Initial Motion Blur Level",IDC_STATIC,20,259,45,17,0,
+                    WS_EX_RIGHT
+    RTEXT           "max",IDC_STATIC,134,255,29,8
+    LTEXT           "none",IDC_STATIC,72,255,32,9
+    LTEXT           "Limit FPS to",IDC_STATIC,27,107,42,9
+    COMBOBOX        IDC_PROCSIZE_COMBO,182,260,66,128,CBS_DROPDOWNLIST | NOT 
+                    WS_VISIBLE | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "- - - RENDER MODE - - -",IDC_STATIC,266,19,81,9
+    LTEXT           "* recommended",IDC_STATIC,13,43,56,10
+    RTEXT           "(video mode selection is only valid for fullscreen and windowed modes)",
+                    IDC_STATIC,183,261,64,16,NOT WS_VISIBLE | WS_DISABLED
+    LTEXT           "PERFORMANCE TIP: In fullscreen mode, to avoid\r\n     jerky or choppy animation, try minimizing all other\r\n     windows on the screen before running Drempels.",
+                    IDC_STATIC,186,211,168,24
+    PUSHBUTTON      "Tweak Overlay Filter Color!",IDC_COLORKEY,74,49,90,14
+    GROUPBOX        "When running as SCREENSAVER",IDC_STATIC,179,7,176,83,
+                    BS_CENTER
+    COMBOBOX        IDC_DESKTOP_RENDERMODE_COMBO,13,29,156,128,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "- - - RENDER MODE - - -",IDC_STATIC,85,18,82,9
+    LTEXT           "* recommended",IDC_STATIC,192,42,66,10
+    GROUPBOX        "Animation Options",IDC_STATIC,7,92,166,196,BS_CENTER
+    CONTROL         "automatically run Drempels\r\n      whenever Windows starts up!",
+                    IDC_CB_STARTUP,"Button",BS_AUTOCHECKBOX | BS_TOP | 
+                    BS_MULTILINE | WS_TABSTOP,14,67,151,19
+    LTEXT           "Time between subdir jumps (seconds) (see documentation):",
+                    IDC_STATIC,185,188,102,16
+    LTEXT           "Americans alone eat 8.8 Billion animals per year.  Please be kind to animals by boycotting factory farmed meat, and limiting your intake.",
+                    IDC_STATIC,186,240,169,26
+    EDITTEXT        IDC_SUBDIR_TIME,290,194,43,13,ES_AUTOHSCROLL
+END
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 210, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Drempels v1.5"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,84,75,41,16,BS_MULTILINE
+    CTEXT           "Written by and copyright (c) Ryan M. Geiss,\r\nOctober 2000 - Feb 2005",
+                    IDC_STATIC,10,7,196,17
+    LTEXT           "Comments/bugs:  [PLEASE read the FAQ first!]",
+                    IDC_STATIC,17,81,12,10,NOT WS_VISIBLE | WS_DISABLED
+    EDITTEXT        IDC_EDIT1,7,79,6,12,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_VISIBLE | WS_DISABLED
+    CTEXT           "as always...\r\nplease be sure to look away every 15 minutes",
+                    IDC_STATIC,7,31,196,19
+    EDITTEXT        IDC_EDIT2,9,54,194,12,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_IMAGEDIRDIALOG DIALOG DISCARDABLE  0, 0, 346, 182
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,289,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,289,24,50,14
+END
+
+IDD_HOTKEYS DIALOG DISCARDABLE  0, 0, 263, 266
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Controlling Drempels"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,206,245,50,14
+    EDITTEXT        IDC_HOTKEYS_EDIT,7,7,249,232,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 355
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 288
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_IMAGEDIRDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 339
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_HOTKEYS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 256
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 259
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_LET_OP              ICON    DISCARDABLE     "let_op.ico"
+IDI_SYSTRAY             ICON    DISCARDABLE     "icon3.ico"
+IDI_SYSTRAY_FOCUS       ICON    DISCARDABLE     "ico00001.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_DREMPELS_SYSTRAY_MENU MENU DISCARDABLE 
+BEGIN
+    MENUITEM "Show/Hide Control Window",    ID_SHOWHIDECONTROLWINDOW
+    MENUITEM "&Close Drempels",             ID_CLOSEDREMPELS
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING1             "This is a test"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

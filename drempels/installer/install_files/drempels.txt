@@ -1,0 +1,387 @@
+
+DREMPELS v1.5
+Written by and copyright (c) Ryan Geiss, October 2000 - February 2005
+
+This program is an application & screensaver for Windows 9x/ME/NT/2k.  
+See below for installation instructions.
+
+OFFICIAL WEBSITE: 
+   http://www.geisswerks.com/drempels
+   -now with "comments", "troubleshooting", and "feature requests" forums!
+
+   The web site is THE place for up-to-date information about
+   Drempels.  If your problem is not addressed in this document,
+   please try reading the TROUBLESHOOTING FORUM on the website,
+   and if you can't find the answer there, please post a new
+   comment, and maybe someone who knows a solution (or the author)
+   will be able to help.
+
+   Please use the forums instead of e-mailing me, so that all users
+   of Drempels users can be "in the loop."
+
+
+REQUIREMENTS
+------------------------------------------
+    -DirectX 5.0 or greater ( http://www.microsoft.com/download )
+    -Windows 9x/ME/NT/2k operating system
+    -Your CPU (processor) must support the MMX instruction set.  
+       Almost all CPU's faster than 300 MHz support this, and all 
+       Pentium II or later chips do.  
+
+
+INSTALLATION
+------------------------------------------
+All you have to do is download and run the file
+DREMPELSXXX_SETUP.EXE (where XXX is a version number)
+and Drempels will integrate itself into your system.
+
+One additional thing you might have to do is to
+TURN ACTIVE DESKTOP OFF (if it's on); Active Desktop
+will prevent Drempels from drawing to your background
+when Drempels is running in "Desktop Mode".  For
+instructions on how to do this, see the "TROUBLESHOOTING"
+section below.
+
+To uninstall, simply go to the Start Menu, Programs,
+Drempels, and select "Uninstall".
+
+To configure Drempels, click the "Drempels Config"
+shortcut on the desktop, or go to the Start Menu,
+Programs, Drempels, and then "Configure Drempels."
+
+To change your screensaver options, go to the
+Start Menu, then Settings, and Control Panel.  From the
+Control Panel, double-click "Display", and the
+Display Properties dialog will come up.  From this
+dialog, select the "Screen Saver" tab, and from there
+you can tweak your screen saver settings.
+
+
+USAGE
+------------------------------------------
+Drempels has two basic modes of operation:
+  1) Fullscreen mode    (screensaver mode)
+  2) Desktop mode       (application mode)
+
+Fullscreen Mode
+  When you run Drempels as a screensaver (like you would
+  any normal screensaver), it takes over the entire screen -
+  this is "Fullscreen Mode".  
+
+  In Fullscreen Mode, Drempels behaves like a normal
+  screensaver: it takes over the entire screen, and you can
+  move the mouse, or hit ESCAPE, to exit.  You can also
+  use many of Drempels' hotkeys - press 'h' for a list.
+
+Desktop Mode
+  However, when you run Drempels manually (via a shortcut),
+  or when Drempels launches automatically at startup (if
+  you've enabled this option), it runs in "Desktop Mode."
+
+  Desktop mode runs in your windows desktop, or background.
+  You are free to work in other applications, but instead
+  of the ordinary static background image, you have a moving
+  one.  Drempels is very CPU-friendly and only uses your 
+  idle CPU cycles.
+  
+  When you're in Desktop Mode, you can use hotkeys to control
+  it, like in fullscreen mode, but ONLY WHEN THE "DR" ICON
+  IN THE SYSTEM TRAY IS HIGHLIGHTED IN GREEN.  If it is dark
+  (black), then keyboard input is flowing into some other 
+  application (such as a word processor).  To make the icon
+  highlight in green, click on it.  You can then use the hotkeys.
+  (For a complete list of the hotkeys, press 'h'.)  
+  
+  You can also right-click the "Dr" icon to get a popup menu 
+  from which you can close or suspend Drempels.  "Suspending" 
+  it means Drempels will stay resident in memory, but it will
+  temporarily restore your original wallpaper, and it won't
+  try to use your idle CPU cycles.  To exit suspend mode, 
+  simply click on the "Dr" icon again.
+
+
+COMPATIBILITY TIPS
+------------------------------------------
+1. If you have problems getting it to run in 'desktop mode', 
+    make sure Windows is running in 16-bit color.  You can 
+    check this by going to the start menu, then Settings, 
+    Control Panel, Display Properties, clicking the 'Settings' 
+    tab, and making sure in the 'Colors' box it says 'High 
+    Color (16 bit)'.  If you are running in 16 bit color
+    and it doesn't work, try 24 or 32 bit.
+
+2. If it still won't run in 'desktop wallpaper mode', try 
+    downloading the most recent software driver for your 
+    video card.  You can do this by going to the web page
+    of the company that makes your video (graphics) card.
+   Also try tweaking the overlay filter color from the 
+    Drempels configuration panel.
+
+3. If you're trying to Drempels as a screensaver
+    (fullscreen mode), if it doesn't work, try telling 
+    Drempels to run in a Video Mode of a different bit 
+    depth (16, 24, or 32).   If that doesn't work, try 
+    different options for your Windows bit depth (see 
+    tip #1 for how to do this).
+
+4. Regardless of the whether you're trying to run in 
+    fullscreen or desktop mode, if it does't work, try each
+    of the low, medium, and high-quality settings.  The
+    most important thing is to try qualities other than
+    'high', since a small handful of video cards can't 
+    do high quality mode (they run out of video memory).
+
+
+TROUBLESHOOTING
+------------------------------------------
+1. If nothing shows up when you run Drempels in fullscreen
+    mode (all you see is the little "Dr" system tray icon),
+    MAKE SURE THAT ACTIVE DESKTOP WEB CONTENT IS TURNED OFF.
+    Active Desktop prevents Drempels from displaying properly.
+    To do this, right-click on your desktop, select
+    "Active Desktop", and make sure the "View as Web Page"
+    option is unchecked.
+
+
+PERFORMANCE TIPS
+------------------------------------------
+1. In fullscreen mode, to avoid jerky or choppy animation, 
+    minimize all the other windows on the screen before 
+    running Drempels.
+
+2. If the frame rate is slow, try reducing the quality to 
+    low or medium.  Or, if you're running it in fullscreen  
+    mode, try a lower-resolution video mode (such as 320x240 
+    or 400x300).  
+
+
+MISCELLANEOUS NOTES
+------------------------------------------
+1. while it's running:
+    -hit 'H' for help (shows you a list of hotkeys)
+    -hit 'ESC' (escape) to exit
+    -hit 'R' to randomize the texture & behavior
+    -hit 'SPACE' to load a new (random) texture
+    -hit 'T' to lock/unlock the current texture 
+       (they randomly fade in and out)
+       (note that this used to be the 'L' key)
+    -hit 'B' to lock/unlock the current behavior
+       (the characteristic motion of the texture)
+    -hit 'P' to pause Drempels and free up the CPU
+       (hit it again to unpause it)
+    -hit '+' to increase the amount of motion blur, and '-' to
+       reduce it.
+    -hit 'F5' to refresh the texture file listing
+    -hit 'F6' to show the filename of the current texture
+    -hit '@' to save a screenshot to C:\
+    -hit 'Q' to toggle high quality textures on/off
+    -hit 'J' and 'K' to zoom in and out
+    -hit 'U' and 'I' to slow down or speed up the animation
+    -hit 'N' to minimize the window (fullscreen mode only)
+    -hit 'S' to suspend (desktop mode only)
+	-hit 'M' to toggle global text message suppression on/off
+
+2. keys for advanced users: (VJ's)	
+	-hit the number keys (1-9) along the top of the keyboard
+		to switch the source image folder from the main one
+		(c:\program files\drempels) to a subfolder number 1-9
+		(example: c:\program files\drempels\5).  Hit '0' (zero)
+		to go back to the main folder.  (note: the default
+		installation doesn't put any images in these folders;
+		you have to create the folders & put images in them.)
+	-hit 'a' to toggle automatic (sequential) cycling through 
+		those subdirectories on/off.  (It is off by default.)  
+		Hit 'a' a second time to turn automatic cycling off.  The
+		length of time that it sticks with a subdirectory is determined by the
+		new 'Time between subdir jumps (seconds)' box on the config panel.
+	-hit SHIFT+A (capital 'A') (instead of lowercase 'a') to
+		cycle randomly (rather than sequentially) through the subdirectories.
+		Not all subdirectories must be present, but at least one of them must
+		be present, for these features to work.  And any subdirectory that 
+		is present must have at least one image in it.
+
+3. if you ever want to reset the config panel to the default options,
+        go into your registry under HKEY_CURRENT_USER\SOFTWARE and
+        delete the folder called 'drempels'.
+
+4. review of requirements on creating/adding textures:
+    1. 256x256 is the preferred size, but images can be any size.
+    2. 24-bit
+    3. TGA, BMP, or JPG format (note: TGA/BMP are fastest)
+    4. must be placed the image folder you've specified from the
+       config panel.  
+
+    For creating textures, I VERY highly recommend IRFANVIEW, a
+    small, simple and powerful image viewer/editor that is excellent
+    for doing batch conversions like these.  Visit 
+    <A HREF="http://www.winfiles.com">Winfiles</A> to download 
+    IrfanView.  (Hit 'B' in Irfanview to do a batch conversion,
+    and use the 'Advanced Options' button to do all the fancy 
+    stuff.)
+
+    There is also a program called Reptile at this link:
+    <http://www.sausagetools.com/reptile/reptile.html>click here</A>.
+    This program lets you create seamless patterns that work very
+    well with Drempels.
+
+5. mini-guide to invoking Drempels:
+    Drempels will run in either fullscreen or desktop mode based on
+    how you launch it.  (The screensaver always runs in fullscreen mode, 
+    while the "application" version always runs in desktop mode.)
+
+        To run the screensaver:  "drempels.exe /s"  (always uses fullscreen mode)
+        To run the application:  "drempels.exe"     (always uses desktop mode)
+        To run the config panel: "drempels.exe /c"
+        To run it **from startup folder**:  "drempels.exe /y" 
+          (...'/y' makes it only actually run if the "launch at startup" 
+           option is checked in the config panel; if not, it just exits)
+    
+    NOTE: you can also run it as a screensaver by using drempels.scr 
+    (located in your windows SYSTEM directory) in the normal fashion;
+    it does require drempels.exe, though, which is in your windows dir.
+
+
+KNOWN BUGS
+------------------------------------------
+1.  In desktop mode, when the monitor shuts off (to conserve
+    power) and then later comes back on, drempels is gone.
+    To get Drempels back, simply click on the icon in the
+    systray.
+
+2.  If you change your windows display settings (video mode)
+    while Drempels is running, you will again get a pink 
+    background and no Drempels.  You'll need to close Drempels 
+    and open it again to get it to work.
+
+
+NEW FEATUERS - v1.5 - 6 Feb 2005
+--------------------------------
+1.  Added 'm' key to toggle global suppression of all text messages on/off
+2.  Added ability to cycle through random subdirectories under the main
+	folder that has been selected.  The subdirectories must be named "1"
+	through "9".  You can hit those keys (1-9) while the program is running
+	to jump to those subdirectories.  You can hit '0' (zero) to go back
+	to the main drempels texture directory.  
+	
+	You can also hit 'a' to toggle automatic (sequential) cycling through 
+	those subdirectories on/off.  (It is off by default.)  
+	Hit 'a' a second time to turn automatic cycling off.  The
+	length of time that it sticks with a subdirectory is determined by the
+	new 'Time between subdir jumps (seconds)' box on the config panel.
+	
+	You can also hit SHIFT+A (capital 'A') (instead of lowercase 'a') to
+	cycle randomly (rather than sequentially) through the subdirectories.
+	Not all subdirectories must be present, but at least one of them must
+	be present, for these features to work.  And any subdirectory that 
+	is present must have at least one image in it.
+3. cranked motion vector gridsize up from 18x14 to 36x28
+4. enabled higher resolutions (1280xYYY, 1600xYYY)
+5. screensaver mode now runs in high quality (1X zoom) be default,
+	rather than medium quality (2X zoom).
+
+
+NEW FEATURES - v1.4 - 5 April 2001
+----------------------------------
+1.  Win2k pink mouse cursor bug should be fixed.
+2.  Drempels will now run in either fullscreen or desktop mode, based on
+    how you launch it.  The screensaver always runs in fullscreen mode, 
+    while the "application" version always runs in desktop mode.
+       (The "application" version is invoked by clicking a shortcut to
+        Drempels, as opposed to running it as a Windows screensaver.)
+3.  Added option to automatically launch Drempels at Windows startup.
+4.  Added user-customizable overlay filter color (for Desktop Mode)
+5.  Jpeg images are now supported (but it's SLOW)
+6.  The 256x256 image restriction has been lifted
+    (but 256x256 has the fastest load time)
+7.  Drempels now runs in the system tray when in desktop mode.
+    When the icon is bright green, Drempels will steal the keyboard
+    input, so you can control it with the keyboard; when it is black,
+    the keyboard input goes to whatever window you're working in.
+    Click on the icon to make it green; click elsewhere to give
+    keyboard input to another window or application.
+8.  Added 'Suspend' feature for desktop mode (hides Drempels but
+    leaves the icon in the systray, so you can bring it back).
+9.  Added the F6 hotkey so you can see the filename of the current
+    texture.
+10. Revamped the way text messages are displayed; now right-justified,
+    stackable, and with better color matching.
+
+
+NEW FEATURES - v1.3 - 8 Jan 2001
+--------------------------------
+1.  Desktop mode is now much faster (+20%)
+2.  Added U/I keys to slow down/speed up animation
+3.  Added 'n' key to minimize
+4.  Added 'b' key to lock/unlock behavior
+5.  Added 'p' key to pause/unpause the animation (cpu friendly)
+6.  Changed 'L' key to 'T'
+7.  Binimizing the window now pauses the action
+    (to conserve resources) (check it with your CPU monitor!)
+8.  Improved compatibility across the board by reducing dependence
+    on DirectDraw drivers (puke!)
+9.  Improved compatibility in windowed mode by making the render
+    window run in the same bit depth as Windows is in
+    (Drempels now ignores config the panel selection of bit depth
+    for windowed mode.)
+10. Improved compatibility in desktop mode
+11. Changed config panel so anim. speed has greater range (8X)
+12. In the config panel, the video mode selection box is now
+    disabled whenever Desktop Wallpaper Mode is selected, so
+    the user realizes that it has no effect.
+13. Fixed bug where if your machine crashed while Drempels was
+    running in desktop mode, when you rebooted, your wallpaper
+    would be bright pink.
+14. Effect of the animation speed slider in the config panel 
+    is now more exact
+
+
+NEW FEATURES - v1.2 - 5 Dec 2000
+--------------------------------
+1.  Added DESKTOP MODE - now Drempels can be your windows wallpaper,
+    fully animated!  Currently works with about 75% of video cards...
+    the next release should be a little better.  PLEASE, NO E-MAILS
+    about compatibility problems!
+2.  Added low- and medium-quality rendering modes, to speed things
+    up dramatically.
+3.  Added high-quality texture mode (bilinear texel interpolation).
+4.  Added support for BMP's (now you can use TGA or BMP files).
+5.  Replaced some manual blit code with DirectDraw blits, so 
+    graphics hardware compatibility should be improved (with the
+    exception of Desktop Mode).
+6.  Removed password support
+7.  Added J/K keys to zoom in/out 
+8.  Added R key to randomize things
+9.  Fixed a bug with jerky images
+10. General, massive cleanup of code should improve stability.
+11. Things like ALT-TABbing to other fullscreen apps should no
+    longer be a problem.
+-Bugs fixed in v1.2b:-
+12. fixed bug w/desktop mode on restoring "" wallpaper (none)
+13. fixed bug w/BMP & TGA files in same dir.
+14. fixed F5 key (was totally broken)
+15. names of texture files that fail to load are now shown with
+    ellipses so you can see the filename
+16. sped up the animation in desktop mode by 60% (just the animation
+    speed, not the frame rate!)
+
+
+NEW FEATURES - v1.1b - 23 Oct 2000
+----------------------------------
+1. fixed a bug with the initial setting of 'animation speed' in the config 
+    panel; for people upgrading from Drempels 1.0, it was set to 4X-speed
+    by default, instead of "normal."
+
+
+NEW FEATURES - v1.1  - 21 Oct 2000
+----------------------------------
+1. you can now set a limit on the fps (frames per second) if you like
+2. more algorithms/variety in the texture movements
+3. more versatile controls over the texture movements (from config panel)
+4. can now control the amount of motion blur with the + and - keys
+5. now using bicubic interpolation of texcoords, for the ultimate
+    smoothness in rasterization.
+
+
+
+
+
