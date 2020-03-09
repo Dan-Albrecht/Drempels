@@ -3467,7 +3467,7 @@ BOOL doInit( HINSTANCE hInstance, int nCmdShow )
 	{
         if (!bOverlay)
         {
-			MessageBox( NULL, "Either your video card does not support overlays or your current driver doesn't.", "ERROR", MB_OK );
+			HandleNoOverlays();
 			finiObjects();
 			return FALSE;
         }

@@ -21,6 +21,8 @@
 
 #include <windows.h>
 #include <math.h>
+
+#define SHIMPATH L"Software\\Microsoft\\Direct3D\\Shims\\EnableOverlays"
  
 // This function evaluates whether the floating-point
 // control Word is set to single precision/round to nearest/
@@ -299,7 +301,114 @@ void WriteConfigRegistry()
 	RegCloseKey(skey);
 }
 
+// Shows a message box with two string concatenated. If for some reason concatenation fails, only the first string will be used.
+void MessageBoxWithTwoStrings(LPCSTR szPrimary, LPCSTR secondary, UINT uType = MB_OK | MB_ICONERROR)
+{
+	const size_t bufferLength = 1024;
+	CHAR buffer[bufferLength] = { 0 };
 
+	if (strcat_s(buffer, bufferLength, szPrimary) || strcat_s(buffer, bufferLength, secondary))
+	{
+		MessageBox(NULL, szPrimary, NULL, uType);
+	}
+	else
+	{
+		MessageBox(NULL, buffer, NULL, uType);
+	}
+}
+
+void HandleNoOverlays(void)
+{
+	// Trailing space is intetional as we'll likley concat it.
+	LPCSTR szOverlayError = "Either your video card does not support overlays or your current driver doesn't. ";
+
+	LPCSTR szNoCommandLine = "Additionally, failed to get command line to attempt to set compat shims.";
+	LPCSTR szFailedToSetCompat = "Additionally, failed to set app compat shims to attempt to work around this.";
+	LPCSTR szPleaseRestart = "An app compat shim has been set. Please relaunch and see if the problem is resolved.";
+	LPCSTR szBummer = "Unforunately the app compat shim appears to be in place, but it doesn't seem to be working.";
+
+	LPWSTR* szArglist;
+	int nArgs;
+
+	// The shim seems to only match the exact path (as in direct case insensitve string compairson) the app was launched on. So name isn't sufficent.
+	szArglist = CommandLineToArgvW(GetCommandLineW(), &nArgs);
+	if (szArglist == NULL || nArgs == 0)
+	{
+		MessageBoxWithTwoStrings(szOverlayError, szNoCommandLine);
+		goto done;
+	}
+
+	LPCWSTR szProcessName = szArglist[0];
+
+	LONG result;
+	HKEY hKeyShim;
+	DWORD valueType, value;
+	DWORD cbValueSize = sizeof(DWORD);
+
+	// Create or open existing
+	result = RegCreateKeyExW(HKEY_CURRENT_USER, SHIMPATH, 0, NULL, REG_OPTION_NON_VOLATILE, KEY_ALL_ACCESS, NULL, &hKeyShim, NULL);
+	if (result != ERROR_SUCCESS)
+	{
+		MessageBoxWithTwoStrings(szOverlayError, szFailedToSetCompat);
+		goto done;
+	}
+
+	result = RegQueryValueExW(hKeyShim, szProcessName, NULL, &valueType, (LPBYTE)&value, &cbValueSize);
+	if (result == ERROR_FILE_NOT_FOUND || (result == ERROR_MORE_DATA && valueType != REG_DWORD))
+	{
+		value = 1;
+		result = RegSetValueExW(hKeyShim, szProcessName, 0, REG_DWORD, (CONST BYTE*) & value, sizeof(value));
+
+		if (result == ERROR_SUCCESS)
+		{
+			MessageBoxWithTwoStrings(szOverlayError, szPleaseRestart, MB_OK | MB_ICONINFORMATION);
+			goto done;
+		}
+		else
+		{
+			MessageBoxWithTwoStrings(szOverlayError, szFailedToSetCompat);
+			goto done;
+		}
+	}
+	else if (result != ERROR_SUCCESS || valueType != REG_DWORD)
+	{
+		MessageBoxWithTwoStrings(szOverlayError, szFailedToSetCompat);
+		goto done;
+	}
+	else if (value != 1)
+	{
+		value = 1;
+		result = RegSetValueExW(hKeyShim, szProcessName, 0, REG_DWORD, (CONST BYTE*) & value, sizeof(value));
+
+		if (result == ERROR_SUCCESS)
+		{
+			MessageBoxWithTwoStrings(szOverlayError, szPleaseRestart, MB_OK | MB_ICONINFORMATION);
+			goto done;
+		}
+		else
+		{
+			MessageBoxWithTwoStrings(szOverlayError, szFailedToSetCompat);
+			goto done;
+		}
+	}
+	else
+	{
+		MessageBoxWithTwoStrings(szOverlayError, szBummer);
+		goto done;
+	}
+
+done:
+
+	if (szArglist)
+	{
+		LocalFree(szArglist);
+	}
+
+	if (hKeyShim)
+	{
+		RegCloseKey(hKeyShim);
+	}
+}
 
 
 
