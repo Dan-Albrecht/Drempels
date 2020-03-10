@@ -130,6 +130,9 @@
       <OutputFile>debug\drempels.exe</OutputFile>
       <AdditionalDependencies>comctl32.lib;ddraw.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <Manifest>
+      <EnableDpiAwareness>true</EnableDpiAwareness>
+    </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="gpoly.cpp" />
